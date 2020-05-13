@@ -1,4 +1,4 @@
-# emites-client-api-docs [[English](https://github.com/myfreecomm/emites-client-api-docs/blob/master/README.en.md)]
+# emites-client-api-docs [[English](/emites-client-api-docs/README.en.html)]
 
 Documentação pública da API do produto Emites-Client.
 
@@ -45,10 +45,10 @@ Para criar uma NFC-e (Nota Fiscal Eletrônica do Consumidor), enviar uma mensage
 
 Utilizar como referência os documentos a seguir:
 
-- Esquema YAML da [requisição JSON](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/schema/create_nfce_request_schema.yaml);
-- Esquema YAML da [resposta JSON](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/schema/create_nfce_response_schema.yaml);
-- [Exemplo de JSON de requisição](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/examples/nfce_request.json);
-- [Exemplo de JSON de resposta](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/examples/nfce_response.json);
+- Esquema YAML da [requisição JSON](/emites-client-api-docs/nfce/schema/create_nfce_request_schema.yaml);
+- Esquema YAML da [resposta JSON](/emites-client-api-docs/nfce/schema/create_nfce_response_schema.yaml);
+- [Exemplo de JSON de requisição](/emites-client-api-docs/nfce/examples/nfce_request.json);
+- [Exemplo de JSON de resposta](/emites-client-api-docs/nfce/examples/nfce_response.json);
 
 A resposta de nota aprovada conterá os mesmos campos que foram enviados na requisição, e adicionalmente os seguintes campos exclusivos:
 - `status` com valor `sucesso`;
@@ -113,7 +113,7 @@ onde:
 - "motivo" é a descrição da razão do cancelamento (opcional; se informado deve ter tamanho entre 15 e 255 caracteres)
 
 O payload JSON da resposta do cancelamento será similar àquele devolvido durante a
-operação de criação, com as seguintes diferenças [(ver exemplo)](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/examples/nfce_cancel_response.json):
+operação de criação, com as seguintes diferenças [(ver exemplo)](/emites-client-api-docs/nfce/examples/nfce_cancel_response.json):
 
 - o campo `status` terá o valor `cancelada`;
 - será incluído um campo adicional `cancel_xml_url` com a URL da nota cancelada;
@@ -146,12 +146,12 @@ Para criar uma NF-e (Nota Fiscal do Consumidor), enviar uma mensagem com o ident
 
 Utilizar como referência os documentos a seguir:
 
-- Esquema YAML da [requisição JSON](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/schema/create_nfe_request_schema.yaml);
-- Esquema YAML da [requisição devolução JSON](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/schema/devolucao_nfe_request_schema.yaml);
-- Esquema YAML da [resposta JSON](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/schema/nfe_response_schema.yaml);
-- [Exemplo de JSON de requisição](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/examples/nfe_request.json);
-- [Exemplo de JSON de requisição de devolução](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/examples/nfe_devolucao_request.json);
-- [Exemplo de JSON de resposta](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/examples/nfe_response.json);
+- Esquema YAML da [requisição JSON](/emites-client-api-docs/nfe/schema/create_nfe_request_schema.yaml);
+- Esquema YAML da [requisição devolução JSON](/emites-client-api-docs/nfe/schema/devolucao_nfe_request_schema.yaml);
+- Esquema YAML da [resposta JSON](/emites-client-api-docs/nfe/schema/nfe_response_schema.yaml);
+- [Exemplo de JSON de requisição](/emites-client-api-docs/nfe/examples/nfe_request.json);
+- [Exemplo de JSON de requisição de devolução](/emites-client-api-docs/nfe/examples/nfe_devolucao_request.json);
+- [Exemplo de JSON de resposta](/emites-client-api-docs/nfe/examples/nfe_response.json);
 
 A resposta de nota aprovada conterá os mesmos campos que foram enviados na requisição, e adicionalmente os seguintes campos exclusivos:
 - `status` com valor `sucesso`;
@@ -168,12 +168,12 @@ A resposta de nota aprovada conterá os mesmos campos que foram enviados na requ
 
 ### Existem apenas para NFE
 
-fields: 
+fields:
   - `engine_de_calculo`
   - `contingencia`
 
 
-objects: 
+objects:
   - `nfe`
   - `dados_gerais`
   - `retencao_tributos`

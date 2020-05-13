@@ -1,4 +1,4 @@
-# emites-client-api-docs [[Português-BR](https://github.com/myfreecomm/emites-client-api-docs/blob/master/README.md)]
+# emites-client-api-docs [[Português-BR](/emites-client-api-docs/)]
 
 Public documentation for the Emites-Client product API.
 
@@ -46,10 +46,10 @@ To create a NFC-e, send a message with the identifier `CREATE_NFCE`. In the resp
 
 Use as reference the following documents:
 
-- [JSON request YAML schema](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/schema/create_nfce_request_schema.yaml);
-- [JSON response YAML schema](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/schema/create_nfce_response_schema.yaml);
-- [Sample JSON request](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/examples/nfce_request.json);
-- [Sample JSON response](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/examples/nfce_response.json);
+- [JSON request YAML schema](/emites-client-api-docs/nfce/schema/create_nfce_request_schema.yaml);
+- [JSON response YAML schema](/emites-client-api-docs/nfce/schema/create_nfce_response_schema.yaml);
+- [Sample JSON request](/emites-client-api-docs/nfce/examples/nfce_request.json);
+- [Sample JSON response](/emites-client-api-docs/nfce/examples/nfce_response.json);
 
 The response will contain the same fields that were sent in the request, and additionally the following exclusive fields:
 - `status` with value equal to `sucesso`;
@@ -114,7 +114,7 @@ where:
 - `reason` is the description of the reason for the cancellation (optional; if informed should be between 15 and 255 characters in size)
 
 The cancellation response's JSON payload will be similar to the one returned during the
-creation operation, with the following differences [(see example)] (https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfce/examples/nfce_cancel_response.json):
+creation operation, with the following differences [(see example)] (/emites-client-api-docs/nfce/examples/nfce_cancel_response.json):
 
 - `status` field will have the value `cancelada`;
 - an additional `cancel_xml_url` field with the updated document's URL will be included;
@@ -145,12 +145,12 @@ To create a NF-e, send a message with the identifier `CREATE_NFE`. The same iden
 
 Use as reference the following documents:
 
-- [JSON request YAML schema](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/schema/create_nfe_request_schema.yaml);
-- [JSON devolution request YAML schema](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/schema/devolucao_nfe_request_schema.yaml);
-- [JSON response YAML schema](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/schema/nfe_response_schema.yaml);
-- [Sample JSON request](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/examples/nfe_request.json);
-- [Sample JSON devolution request](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/examples/nfe_devolucao_request.json);
-- [Sample JSON response](https://github.com/myfreecomm/emites-client-api-docs/blob/master/nfe/examples/nfe_response.json);
+- [JSON request YAML schema](/emites-client-api-docs/nfe/schema/create_nfe_request_schema.yaml);
+- [JSON devolution request YAML schema](/emites-client-api-docs/nfe/schema/devolucao_nfe_request_schema.yaml);
+- [JSON response YAML schema](/emites-client-api-docs/nfe/schema/nfe_response_schema.yaml);
+- [Sample JSON request](/emites-client-api-docs/nfe/examples/nfe_request.json);
+- [Sample JSON devolution request](/emites-client-api-docs/nfe/examples/nfe_devolucao_request.json);
+- [Sample JSON response](/emites-client-api-docs/nfe/examples/nfe_response.json);
 
 The response will contain the same fields that were sent in the request, and additionally the following exclusive fields:
 - `status` with value equal to `sucesso`;
@@ -167,12 +167,12 @@ The response will contain the same fields that were sent in the request, and add
 
 ### Only available for NFE
 
-fields: 
+fields:
   - `engine_de_calculo`
   - `contingencia`
 
 
-objects: 
+objects:
   - `nfe`
   - `dados_gerais`
   - `retencao_tributos`
