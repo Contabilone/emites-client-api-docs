@@ -631,7 +631,7 @@ root:
             - A # ativo imobiliario (fixed asset)
         fabricacao:
           type: enum[integer]
-          required: true
+          required: false
           description: factoring location
           enum:
             - 0 # propria   (inhouse)
