@@ -201,6 +201,13 @@ root:
       enum:
         - 0 # Não
         - 1 # Sim
+    indicador_intermediador:
+      type: enum[integer]
+      required: false
+      description: Indica a existência de um intermediador
+      enum:
+        - 0 # Operação sem intermediador (em site ou plataforma própria)
+        - 1 # Operação com intermediador (em site ou plataforma de terceiros [intermediador/marketplace])
     forma_de_pagamento:
       type: array[object]
       description: payment types
