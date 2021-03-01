@@ -201,6 +201,13 @@ root:
       enum:
         - 0 # Não
         - 1 # Sim
+    indicador_intermediador:
+      type: enum[integer]
+      required: false
+      description: Indica a existência de um intermediador
+      enum:
+        - 0 # Operação sem intermediador (em site ou plataforma própria)
+        - 1 # Operação com intermediador (em site ou plataforma de terceiros [intermediador/marketplace])
     forma_de_pagamento:
       type: array[object]
       description: payment types
@@ -356,6 +363,13 @@ root:
         - 4 # domicilio          (home delivery)
         - 5 # presencial externo (outside the trading house)
         - 9 # outros             (other)
+    informacoes_intermediador:
+      type: object
+      require: se indicador_intermediador informado
+      description: Grupo de Informações do Intermediador da Transação
+      fields:
+        cnpj: string somente numeros
+        identificador_cadastro_intermediador: String
     informacoes_adicionais:
       type: object
       required: false
@@ -445,6 +459,12 @@ root:
             - "012345678905"
             - "7891000315507"
             - "00012345600012"
+        codigo_de_barras:
+          type: string
+          required: false
+          description: Código de barras diferente do padrão GTIN
+          minLength: 3
+          maxLength: 30
         ean_unidade_trib:
           type: string
           required: false
@@ -456,6 +476,12 @@ root:
             - "012345678905"
             - "7891000315507"
             - "00012345600012"
+        codigo_de_barras_trib:
+          type: string
+          required: se codigo_de_barras informado
+          description: Código de barras diferente do padrão GTIN
+          minLength: 3
+          maxLength: 30
         extipi:
           type: string
           required: false
