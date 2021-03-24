@@ -655,6 +655,13 @@ root:
             - C # comercializacao   (trading)
             - U # uso e consumo     (use)
             - A # ativo imobiliario (fixed asset)
+        total_contem_icms:
+          type: enum[String]
+          required: false
+          description: only for Taxweb-Taxrules engine
+          enum:
+            - S # SIM
+            - N # NÃO
         fabricacao:
           type: enum[integer]
           required: false
