@@ -181,10 +181,17 @@ root:
         - 3 # externo       (international)
     engine_de_calculo:
       type: string
-      required: true
+      required: false
       description: calculation engine for sale
       examples:
-        - "taxweb"     
+        - "taxweb"
+    tp_calculo:
+      type: enum[String]
+      required: true - only for engine_calculo = taxweb
+      description: Calculation type
+      enum:
+        - REC #
+        - TAX #
     finalidade_nfe:
       type: enum[integer]
       required: true
@@ -658,7 +665,7 @@ root:
         total_contem_icms:
           type: enum[String]
           required: false
-          description: only for Taxweb-Taxrules engine
+          description: only for engine_de_calculo = taxweb
           enum:
             - S # SIM
             - N # NÃO
