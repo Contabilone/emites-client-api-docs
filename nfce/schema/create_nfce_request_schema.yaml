@@ -115,12 +115,12 @@ root:
   fields:
     cliente:
       type: object
-      required: false
+      required: true
       description: costumer schema
       fields:
         cpf_cnpj:
           <<: *t_document_id
-          required: true
+          required: conditional under legal details
         regime_tributario_diferenciado:
           type: enum[string]
           required: false
@@ -168,7 +168,7 @@ root:
           required: true
           description: person type
           enum:
-            - person # natural person (CPF)
+            - person  # natural person (CPF)
             - company # legal person  (CNPJ)
             - foreign #               (idEstrangeiro)
     destino_operacao:
@@ -314,13 +314,13 @@ root:
               description: first six card's digits
               max_length: 6
               examples:
-                - "545554"    
+                - "545554"
             dono_cartao:
               type: string
               required: if uf == CE and tipo_integracao == 1
               description: full name of card's owner from card's operator
               examples:
-                - "Nome Ficticio" 
+                - "Nome Ficticio"
             data_expiracao:
               type: date
               required: if uf == CE and tipo_integracao == 1
@@ -333,7 +333,7 @@ root:
               required: if uf == CE
               description: Name of card's operator
               examples:
-                - "CIELO" 
+                - "CIELO"
             parcelas:
               type: number
               required: if uf == CE and tipo_integracao == 1
@@ -349,7 +349,7 @@ root:
             ultimos_digitos :
               type: string
               required: if uf == CE and tipo_integracao == 1
-              description: last 4 card's digits 
+              description: last 4 card's digits
               examples:
                 - "0234"
             nsu :
@@ -357,7 +357,7 @@ root:
               required: if uf == CE
               description: NSU Number
               examples:
-                - "123456789"    
+                - "123456789"
     indicador_presenca:
       type: enum[integer]
       required: true
